@@ -56,7 +56,7 @@ plot "data.dat" title "my interesting data"  linestyle 7 linecolor 0 with linesp
 
 采用`data.dat`绘图，标题为`my interesting data` 线型7，颜色0，点线绘图，结果如下
 
-![](/home/hubery-lee/WorkSpace/leeTutorials/1.png)
+![](1.png)
 
 缩略写法
 
@@ -84,7 +84,7 @@ set output "2.png"
 
 添加函数`0.001x`，绘制结果如下
 
-![](/home/hubery-lee/WorkSpace/leeTutorials/2.png)
+![](2.png)
 
 绘制带errobar的图，绘图时采用第3列的error放大了10倍的数据
 
@@ -94,7 +94,7 @@ plot "dataError.txt" using 1:2:($3*10)  title "my interesting data"  lt 7 lc 0 w
 set output "3.png" #存储图片
 ```
 
-![](/home/hubery-lee/WorkSpace/leeTutorials/3.png)
+![](3.png)
 
 ```sh
 test #查看线性等
@@ -159,7 +159,7 @@ set output "4.png"
 
 美化后图像如下
 
-![](/home/hubery-lee/WorkSpace/leeTutorials/4.png)
+![](4.png)
 
 
 
