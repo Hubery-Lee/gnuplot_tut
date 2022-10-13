@@ -155,6 +155,8 @@ rep #replot
 ```sh
 set term pngcairo size 1280,960
 set output "4.png"
+
+set logscale y #设置对数坐标系
 ```
 
 美化后图像如下
@@ -163,9 +165,44 @@ set output "4.png"
 
 
 
+## 3. 数据拟合
+
+拟合原理：
+$$
+f(x) = a \cdot exp(bx) \\
+s(x_i,y_i,a,b) = \sum_i(y_i-f(x_i,a,b))^2  \\
+$$
+
+sum of squared residual 残差和
+$$
+s(x_i,y_i,a,b)
+$$
+
+引入权重：
+$$
+w_i=1/\sigma_i^2 \\
+s(x_i,y_i,a,b) = \sum_i w_i (y_i-f(x_i,a,b))^2  
+$$
+数据拟合算法查看数字分析的教材
+
+```sh
+p "ExpdataError.txt" using 1:2 # 绘制数据图第1，2列
+f(x)=a*exp(-b*x) #设置拟合函数
+fit f(x) "ExpdataError.txt" using 1:2 via a,b #采用函数f(x)拟合，拟合参数a,b
+p "ExpdataError.txt",f(x)
+
+```
+
+使用errorbar
+
+```sh
+p "ExpdataError.txt" using 1:2:3 with errorbars # 绘制数据图第1，2列,带errorbars
+f(x)=a*exp(-b*x) #设置拟合函数
+fit f(x) "ExpdataError.txt" using 1:2:3 yerrors via a,b #采用函数f(x)拟合，拟合参数a,b,第3列error
+p "ExpdataError.txt" w errorbars,f(x) 
+```
 
 
 
-
-
+### 
 
