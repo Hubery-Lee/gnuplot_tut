@@ -1,0 +1,13 @@
+Num     Month       T/C     Daily sunshine hours
+1       Jan         1.2     2.1
+2       Feb         2.9     3.7
+3       Mar         6.4     4.1
+4       Apr         11.5    6.1
+5       May         16.5    7.7
+6       Jun         19.1    7.6
+7       Jul         21.7    8.4
+8       Aug         21.6    8.1
+9       Sep         16.8    5.6
+10      Oct         11.6    4.5
+11      Nov         5.5     2.2
+12      Dec         2.4     1.6
