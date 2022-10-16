@@ -1,5 +1,7 @@
 # Gnuplot 简易教程
 
+:fire: 忽必烈李@bilibili:fire:
+
 [TOC]
 
 **Gnuplot** is a portable command-line-driven graphing utility for Linux, OS/2, MS Windows, OSX, VMS, and many other platforms.
