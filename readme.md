@@ -261,7 +261,7 @@ plot "potential_field.dat" w image,"potential_field.dat" using 1:2:(3*($4/sqrt((
 
 ## 6.导出到latex
 
-png图片是像素化的，非矢量图，放大后失真，故而，建议使用pdg或latex图，latex图可以修改图的坐标标题等，故而，可以通过这个种方式设置中文坐标轴
+png图片是像素化的，非矢量图，放大后失真，故而，建议使用pdf或latex图，latex图可以修改图的坐标标题等，故而，可以通过这个种方式设置中文坐标轴
 
 ```sh
 set yzeroaxis lt -1
@@ -275,6 +275,7 @@ set xrange[-pi:pi]
 plot 2*abs(sin(x/2))
 set terminal epslatex color colortex
 set output "disp.tex"
+replot
 set output
 ```
 
